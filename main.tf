@@ -38,7 +38,7 @@ resource "aws_key_pair" "nexus" {
 module "nexus" {
     source = "terraform-aws-modules/ec2-instance/aws"
     name = "nexus"
-    instance_type = "t3.small"
+    instance_type = "t3.medium"
     vpc_security_group_ids = ["sg-0b2fc2c3bbd8e8c3a"]
     subnet_id = "subnet-05c3ef0bbeeec1cc2"
     key_name = aws_key_pair.nexus.key_name ## attach key name
